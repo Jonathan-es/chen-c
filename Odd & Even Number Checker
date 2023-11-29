@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void checkNum(int num, int *check)
+{
+    if(num % 2 == 0){
+        (*check)++;
+    }
+}
+
+int main()
+{
+    int num, check = 0;
+    
+    printf("enter a number: ");
+    scanf("%d", &num);
+
+    checkNum(num, &check);
+
+    if(check == 0){
+        printf("your number is odd");
+    }   else{
+        printf("your number is even");
+    }
+    return 0;
+}
